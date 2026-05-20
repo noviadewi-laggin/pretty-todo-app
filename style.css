@@ -81,10 +81,7 @@ li:hover {
 }
 .completed {
   text-decoration: line-through;
-  opacity: 0.5;
-}
-.completed {
-  text-decoration: line-through;
-  opacity: 0.5;
-  transform: scale(0.98);
+  opacity: 0.4;
+  color: #cfcfcf;
+  transition: 0.3s;
 }
