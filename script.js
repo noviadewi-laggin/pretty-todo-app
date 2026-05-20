@@ -61,3 +61,10 @@ function toggleTask(index) {
   displayTasks()
 }
 displayTasks()
+function handleEnter(event) {
+
+  if (event.key === "Enter") {
+    addTask()
+  }
+
+}
