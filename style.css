@@ -85,3 +85,30 @@ li:hover {
   color: #cfcfcf;
   transition: 0.3s;
 }
+.task-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.check-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+.delete-btn {
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 16px;
+}
