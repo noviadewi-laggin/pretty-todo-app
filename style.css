@@ -87,19 +87,16 @@ li:hover {
 }
 .task-left {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
 }
 
 .check-btn {
   background: transparent;
-  color: white;
   border: none;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 24px;
+  padding-top: 2px;
 }
 
 .delete-btn {
@@ -111,4 +108,8 @@ li:hover {
   height: 40px;
   cursor: pointer;
   font-size: 16px;
+}
+.task-left div {
+  display: flex;
+  flex-direction: column;
 }
