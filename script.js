@@ -31,16 +31,32 @@ function displayTasks() {
   for (let i = 0; i < tasks.length; i++) {
 
     taskList.innerHTML += `
-      <li>
-        <span 
-  onclick="toggleTask(${i})"
-  class="${tasks[i].completed ? 'completed' : ''}"
->
-  ${tasks[i].text}
-</span>
-        <button onclick="deleteTask(${i})">❌</button>
-      </li>
-    `
+  <li>
+
+    <div class="task-left">
+
+      <button 
+        class="check-btn"
+        onclick="toggleTask(${i})"
+      >
+        ${tasks[i].completed ? '✔️' : '⬜'}
+      </button>
+
+      <span class="${tasks[i].completed ? 'completed' : ''}">
+        ${tasks[i].text}
+      </span>
+
+    </div>
+
+    <button 
+      class="delete-btn"
+      onclick="deleteTask(${i})"
+    >
+      🗑️
+    </button>
+
+  </li>
+`
   }
 }
 
