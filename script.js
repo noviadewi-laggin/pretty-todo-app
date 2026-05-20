@@ -10,7 +10,10 @@ function addTask() {
     return
   }
 
-  tasks.push(task)
+  tasks.push({
+  text: task,
+  completed: false
+})
 
   localStorage.setItem("tasks", JSON.stringify(tasks))
 
@@ -29,7 +32,12 @@ function displayTasks() {
 
     taskList.innerHTML += `
       <li>
-        ${tasks[i]}
+        <span 
+  onclick="toggleTask(${i})"
+  class="${tasks[i].completed ? 'completed' : ''}"
+>
+  ${tasks[i].text}
+</span>
         <button onclick="deleteTask(${i})">❌</button>
       </li>
     `
@@ -44,5 +52,12 @@ function deleteTask(index) {
 
   displayTasks()
 }
+function toggleTask(index) {
 
+  tasks[index].completed = !tasks[index].completed
+
+  localStorage.setItem("tasks", JSON.stringify(tasks))
+
+  displayTasks()
+}
 displayTasks()
